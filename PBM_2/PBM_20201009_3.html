@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!--
+    CSS選擇器練習
+-->
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>CSS Practice 2</title>
+
+        <!--將風格包裝起來，程式碼才不會這麼雜亂，以後要改風格也比較容易-->
+        <!--記得用"點"是代表"class"-->
+        <!--可以用"position"定位-->
+        <style tpye = "text/css">
+            .title{font-weight : bold; font-size : 20px;}
+            .content{width : 400px; padding : 10px; border : 1px solid blueviolet;margin-top : 10px; margin-bottom : 10px;}
+            .keyword{color : red}
+            .box{ 
+                position : absolute; left : 400px; top : 50px;
+                width : 100px; height : 100px;background-color : gold;
+            }
+            .box_2{ 
+                position : relative; left : 400px; top : 50px;
+                width : 100px; height : 100px;background-color : gold;
+            }
+        </style>
+
+    </head>
+    <body>
+    
+    <div style="font-weight : bold; font-size : 20px;">Today is good</div>
+
+    <div style="width : 400px; padding : 10px; border : 1px solid blueviolet;margin-top : 10px; margin-bottom : 10px;">
+        I went for <span style = "color : red">a walk</span>.<br/>
+        walk two blocks, and turn left.
+    </div>
+
+
+    <!--通常格式會一直重複，所以用"CSS選擇器"的方式寫，有點像是function"-->
+    <!--將風格包裝後，程式就簡化許多-->
+    <div class="title">Cool</div>
+
+    <div class="content">
+        lots of people.<br/>
+        many <span class = "keyword">people</span> , dogs, cats.
+    </div>
+
+    <!--寫成"class"就好用許多，隨時可以在添加別的風格-->
+    <!--因為"box"有用"absolute"，所以]不管程式寫在哪一行，都不會影響版面-->
+    <div class = "box"></div>
+
+    <!--因為"box_2"是用"relative"，所以位置是根據目前位置去做位移-->
+    <!--但原先的位置還是有留空位-->
+    <div class = "box_2"></div>
+
+    <div class="content">
+        <!--通常"relative"會用在上標、下標等等地方，屬於"小"區塊的位移-->
+        25 m<span style = "position : relative; top: -5px;">2</span>
+        
+    </div>
+
+    </body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!--
+    第一個練習的網頁
+-->
+<!--
+    如果想要寫中文網頁
+    1. 要用"UTF-8"存檔(在Notepad++選"Convert to UTF-8 without BOM")
+    2. 在"head"加入"<meta charset="utf-8"/>"，要告訴別人編碼方式
+-->
+
+<html>
+    <!--"head"是網頁的描述-->
+    <head>
+
+        <meta charset="utf-8"/>
+        <!--"title"是網頁的標題-->
+        <title>JF的主頁</title>
+
+    </head>
+
+    <!--顯示在主畫面的都會在"body中"-->
+    <body> 
+        <!--"h3"是3號標題，數字愈小，字愈大-->
+        <h3>My Picture</h3>
+        <!--插入圖片用"img"；"src"是屬性，加入圖片位址-->
+        <img src="https://s2.starfocus.news/imgs/202005/18/3/15897863774825.jpg" width="320" height="240"/>
+        
+        <!--
+            "hr"水平線
+            <hr></hr>
+            如果標籤之間都沒有文字，可以簡寫如下
+        -->
+        <hr/>
+
+        <h3>My Favorite</h3>
+        <!--"ul"是列表-->
+        <ul>
+            <!--"li"是項目-->
+            <li>
+                <!--"a"是超連結；"href"是網址-->
+                <a href="https://www.google.com.tw/">Google</a>
+            </li>
+
+            <li>
+                <a href="https://www.youtube.com/?gl=TW">Youtube</a>
+            </li>
+            <li>
+                <a href="https://www.facebook.com/">Facebook</a>
+            </li>
+        </ul>
+
+        <h3>NBA Basketball</h3>
+        <!--"table"表格-->
+        <!--"border"是格線大小-->
+        <!--"width""是表個寬度-->
+        <!--"cellpadding"是格內大小-->
+        <table border = "1" width = "400" cellpadding = "5">
+            <!--"tr"是"row"-->
+            <tr>
+                <!--"td"是"col"-->
+                <td>Teem</td>
+                <td>Win</td>
+                <td>Lose</td>
+            </tr>
+
+            <tr>
+                <!--"b"粗體字-->
+                <!--"u"底線-->
+                <td><b>Los Angeles <u>Lakers</u></b></td>
+                <td>52</td>
+                <td>19</td>
+            </tr>
+
+            <tr>
+                <td>Milwaukee Bucks</td>
+                <td>56</td>
+                <td>17</td>
+            </tr>
+        </table>
+    </body>
+</html>

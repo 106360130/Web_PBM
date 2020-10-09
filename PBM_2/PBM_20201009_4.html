@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<!--
+    CSS選擇器練習
+-->
+
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>CSS Practice 3</title>
+        
+        <!--將所有風格設定都模組化-->
+        <style type = "text/css">
+
+            /*標籤名稱選擇器*/
+            body{
+                /*統一整份文件大小*/
+                font-size: 16px; font-family: "Microsoft JhengHei";
+            }
+            h3{
+                font-size: 24px; text-decoration: underline;
+            }
+
+            /*class選擇器*/
+            /*"class"是用"."*/
+            /*只有在"div"才套用此風格*/
+            div.content{
+                padding: 10px; border: 1px dashed #888888;
+            }
+
+            /*id選擇器*/
+            /*"id""是用"#"*/
+            #btn{
+                border: 1px solid #888888;
+                background-color: #ffffff;
+                padding: 5px;
+            }
+
+            /*虛擬選擇器 : 搭配其他選擇器使用*/
+            /* :hover 虛擬選擇器 : 滑鼠移到目標上，套用一組設定*/
+            #btn:hover{
+                background-color: #888888;
+            }
+
+            /* :focus 虛擬選擇器 : 當目標取得焦點時，套用一組設定*/
+            input:focus {
+                border: 5px solid #ff0000;
+            }
+
+
+            /*階層式選擇器 : 搭配其他選擇器使用*/
+            /*"空白"表示階層性*/
+            /*"class""favorite"的中的"a"才做以下設定*/
+            .favorite a{
+                color: #0000ff;
+            }
+            /*"class""sport""的中的"a"才做以下設定*/
+            .sport a{
+                color: #008800;
+            }
+
+        
+        </style>
+
+    </head>
+
+    
+    <body> 
+        <h3>My Picture</h3>
+
+        <img src="https://s2.starfocus.news/imgs/202005/18/3/15897863774825.jpg" width="320" height="240"/>
+        
+        <div class="content">
+            Hello everyone, welcome to my Web!
+        </div>
+        <!--"hr"水平線-->
+        <hr/>
+
+        <h3>My Favorite</h3>
+      
+        <!--"ul"是列表-->
+        <ul class = "favorite">
+            <!--"li"是項目-->
+            <li>
+                <!--"a"是超連結；"href"是網址-->
+                <a href="https://www.google.com.tw/">Google</a>
+            </li>
+
+            <li>
+                <a href="https://www.youtube.com/?gl=TW">Youtube</a>
+            </li>
+            <li>
+                <a href="https://www.facebook.com/">Facebook</a>
+            </li>
+        </ul>
+    
+
+        <h3>Sport</h3>
+        <ul class="sport">
+            <li>
+                <a href = "https://nba.udn.com/nba/index">Basketballs</a>
+            </li>
+            <li>
+                <a href = "https://www.ittf.com/">Tableteniss</a>
+            </li>
+        </ul>
+        
+
+        <h3>Input the meaasge</h3>
+        <div class = "content">
+            Message <input type="text"/> <button id = "btn">Send</button>
+        </div>
+    </body>
+</html>
